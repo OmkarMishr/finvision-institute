@@ -1,5 +1,5 @@
 export const TICKER_ITEMS = [
-  "PRICE ACTION", "MARKET STRUCTURE", "NIFTY 50", "BANK NIFTY", "SENSEX",
+  "PRICE ACTION", "MARKET STRUCTURE",
   "ORDER FLOW", "SUPPORT & RESISTANCE", "INSTITUTIONAL THINKING",
   "RISK MANAGEMENT", "TRADING PSYCHOLOGY", "CANDLESTICK ANALYSIS", "FINVISION RAIPUR",
 ];
@@ -30,14 +30,12 @@ export const FAQS = [
 
 export const POSTS = [
   { cat: "Beginner Trading", title: "Why 90% Traders Lose Money (And How to Avoid It)", excerpt: "The real reason isn't bad luck or a bad market. It's a fundamental misunderstanding of what trading actually is.", read: "5 min", author: "Akshay Sir" },
-  { cat: "Price Action", title: "What Is Price Action Trading? A Simple Explanation", excerpt: "Forget indicators for a moment. Price action is the only thing that tells you what the market is actually doing right now.", read: "7 min", author: "Akshay Sir" },
+  { cat: "Price Action", title: "What Is Price Action Trading? A Simple Explanation", excerpt: "Forget indicators for a moment. Price action is the only thing that tells you what the market is actually doing right now.", read: "7 min", author: "Mahesh Sir" },
   { cat: "Trading Psychology", title: "Why You Panic in Trades (And How to Fix It)", excerpt: "Panic in trading is almost never about the trade itself. It's about the gap between your plan and your preparation.", read: "6 min", author: "Rohit Gupta" },
   { cat: "Market Analysis", title: "How Market Structure Actually Works", excerpt: "Higher highs, lower lows — but what does it really mean for where price is going? Let's break it down clearly.", read: "8 min", author: "Akshay Sir" },
-  { cat: "Beginner Trading", title: "Trading vs Gambling: The Truth Nobody Tells You", excerpt: "Most people draw the wrong line between these two. Understanding the real difference changes every trade you make.", read: "5 min", author: "Neha Mishra" },
+  { cat: "Beginner Trading", title: "Trading vs Gambling: The Truth Nobody Tells You", excerpt: "Most people draw the wrong line between these two. Understanding the real difference changes every trade you make.", read: "5 min", author: "Mahesh Sir" },
   { cat: "Price Action", title: "Support & Resistance: The Only Levels That Matter", excerpt: "Not every level on your chart deserves attention. Here's how to find the ones that actually do.", read: "9 min", author: "Akshay Sir" },
-  { cat: "Market Analysis", title: "Nifty Analysis: How to Read Market Conditions Simply", excerpt: "Before you place any trade, you need to know what market condition you're in. Most traders skip this entirely.", read: "6 min", author: "Rohit Gupta" },
   { cat: "Trading Psychology", title: "Discipline in Trading: What It Actually Means", excerpt: "Real discipline means knowing your edge and trusting the process even when it's uncomfortable. Here's how.", read: "7 min", author: "Akshay Sir" },
-  { cat: "Beginner Trading", title: "How to Start Trading in India: Step-by-Step Guide", excerpt: "From opening a demat account to understanding your first trade — everything a beginner needs, in the right order.", read: "10 min", author: "Neha Mishra" },
 ];
 
 export const CATS = ["All", "Beginner Trading", "Price Action", "Trading Psychology", "Market Analysis"];

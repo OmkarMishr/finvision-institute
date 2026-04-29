@@ -21,7 +21,8 @@ export default function ContactInfo() {
         </div>
         <div className="ci-block">
           <div className="ci-label">Email</div>
-          <div className="ci-val"><a href="mailto:finvisionofficial@gmail.com">finvisionofficial@gmail.com</a></div>
+          <div className="ci-val"><a href="mailto:support@myfinvision.com">support@myfinvision.com</a></div>
+          <div className="ci-val"><a href="mailto:support@myfinvision.com">info@myfinvision.com</a></div>
         </div>
         <div className="ci-block">
           <div className="ci-label">Response Time</div>
@@ -47,7 +48,7 @@ export default function ContactInfo() {
         </div>
         <div style={{ padding: 28, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", minHeight: 140, justifyContent: "center", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", inset: 0, opacity: 0.04, backgroundImage: "linear-gradient(rgba(192,51,77,1) 1px,transparent 1px),linear-gradient(90deg,rgba(192,51,77,1) 1px,transparent 1px)", backgroundSize: "28px 28px" }}></div>
-          <div style={{ fontSize: 28, marginBottom: 8, position: "relative" }}>📍</div>
+          <div style={{ fontSize: 28, marginBottom: 8, position: "relative" }}>3024</div>
           <div style={{ fontFamily: "var(--ff-head)", fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", position: "relative" }}>
             Currency Tower, VIP Chowk
           </div>

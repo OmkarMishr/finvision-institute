@@ -56,7 +56,7 @@ export default function ContactForm() {
       <div className="disclaimer-box">
         <div className="disclaimer-label">Disclaimer</div>
         <div className="disclaimer-text">
-          Finvision is a trading education company. We are not SEBI-registered advisors and do not provide investment advice, tips, or signals. All content is for educational purposes only. Trading involves risk. Past student results do not guarantee future outcomes.
+          Finvision is a trading Institute. We are not SEBI-registered advisors and do not provide investment advice, tips, or signals. All content is for educational purposes only. Trading involves risk. Past student results do not guarantee future outcomes.
         </div>
       </div>
     </div>

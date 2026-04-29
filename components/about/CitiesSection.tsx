@@ -17,17 +17,17 @@ export default function CitiesSection() {
           <div className="city-card">
             <div className="city-name">Bhilai</div>
             <div className="city-state">Chhattisgarh</div>
-            <div className="city-badge up">Opening Q3 2025</div>
+            <div className="city-badge up">Opening Q3 2026</div>
           </div>
           <div className="city-card">
             <div className="city-name">Bilaspur</div>
             <div className="city-state">Chhattisgarh</div>
-            <div className="city-badge up">Opening Q4 2025</div>
+            <div className="city-badge up">Opening Q4 2026</div>
           </div>
           <div className="city-card">
             <div className="city-name">Indore</div>
             <div className="city-state">Madhya Pradesh</div>
-            <div className="city-badge up">Opening 2026</div>
+            <div className="city-badge up">Opening 2027</div>
           </div>
         </div>
         <div style={{ textAlign: "center", marginTop: 48 }}>

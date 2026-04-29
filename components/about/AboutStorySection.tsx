@@ -26,7 +26,7 @@ export default function AboutStorySection() {
               <div className="tl-item"><div className="tl-year">2018</div><div className="tl-text">Founded in Raipur. First batch of 24 students. No ads — just word of mouth from real results.</div></div>
               <div className="tl-item"><div className="tl-year">2020</div><div className="tl-text">Launched online program. Reached 500+ trained traders across Chhattisgarh.</div></div>
               <div className="tl-item"><div className="tl-year">2022</div><div className="tl-text">Second centre operational. 2000+ traders trained. Advanced program launched.</div></div>
-              <div className="tl-item"><div className="tl-year">2024</div><div className="tl-text">Mentorship batch launched. Bhilai, Bilaspur, Indore expansion underway. 5000+ alumni.</div></div>
+              <div className="tl-item"><div className="tl-year">2024</div><div className="tl-text">Mentorship batch launched. Bhilai, Bilaspur, Indore expansion underway.</div></div>
             </div>
           </div>
         </div>

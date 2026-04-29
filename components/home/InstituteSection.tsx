@@ -37,7 +37,9 @@ export default function InstituteSection() {
             </div>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <button className="btn btn-red" onClick={() => navigate("centers")}>View Centers →</button>
-              <button className="btn btn-outline" onClick={() => navigate("contact")}>Get Directions</button>
+              <a href="https://maps.google.com/?q=Finvision+Institute,+Raipur" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                Get Directions
+              </a>
             </div>
           </div>
           <div>
@@ -52,7 +54,6 @@ export default function InstituteSection() {
               </div>
               <div className="inst-map-body">
                 <div className="inst-map-grid"></div>
-                <div className="inst-map-pin">📍</div>
                 <div className="inst-map-name">Finvision Institute</div>
                 <div className="inst-map-addr">3024, Currency Tower, VIP Chowk<br />Raipur, Chhattisgarh – 492001</div>
                 <div className="inst-map-hours">MON–SAT &nbsp;·&nbsp; 10:00 AM – 7:00 PM</div>

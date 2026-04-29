@@ -18,25 +18,24 @@ export default function CoursesSnapshot() {
         <div className="courses-grid" style={{ background: "var(--border)" }}>
           <div className="course-card" onClick={() => navigate("courses")}>
             <div className="cc-level">Program 01 · Beginner</div>
-            <div className="cc-name">Foundation</div>
+            <div className="cc-name">DEMO</div>
             <div className="cc-desc">Build your foundation. Understand how the market truly moves before learning any strategy.</div>
-            <div className="cc-price">₹8,000</div>
-            <div className="cc-price-note">EMI AVAILABLE ON REQUEST</div>
+            <div className="cc-price">FREE</div>
+            <div className="cc-price-note">Enroll Now !</div>
             <div className="cc-arrow">Start Journey →</div>
           </div>
           <div className="course-card featured" onClick={() => navigate("courses")}>
             <div className="cc-level">Program 02 · Advanced · Popular</div>
             <div className="cc-name">Advanced</div>
             <div className="cc-desc">Master price action, institutional structure, strategy building and disciplined execution.</div>
-            <div className="cc-price">₹15,000</div>
-            <div className="cc-price-note">EMI AVAILABLE ON REQUEST</div>
+            <div className="cc-price">₹14,999</div>
             <div className="cc-arrow">Upgrade Skills →</div>
           </div>
           <div className="course-card" onClick={() => navigate("courses")}>
             <div className="cc-level">Program 03 · Mentorship</div>
-            <div className="cc-name">Mentorship</div>
+            <div className="cc-name">ADVANCE + LIVE MARKET SESSIONS</div>
             <div className="cc-desc">Trade with live guidance. Real feedback on real trades. Direct access to Akshay Sir.</div>
-            <div className="cc-price">₹25,000</div>
+            <div className="cc-price">₹19,999</div>
             <div className="cc-price-note">LIMITED TO 12 SEATS/BATCH</div>
             <div className="cc-arrow">Learn with Experts →</div>
           </div>

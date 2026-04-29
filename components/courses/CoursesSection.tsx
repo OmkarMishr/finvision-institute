@@ -24,8 +24,8 @@ export default function CoursesSection() {
           <div className="course-full">
             <div className="cf-head">
               <div className="cf-level">Program 01 · Beginner</div>
-              <div className="cf-title">Foundation</div>
-              <div className="cf-dur">8 Weeks · Online &amp; Offline</div>
+              <div className="cf-title">DEMO</div>
+              <div className="cf-dur">5 Days · Online &amp; Offline</div>
             </div>
             <div className="cf-body">
               <div className="cf-for">For: Complete beginners and those stuck in indicator-based trading who want to restart correctly.</div>
@@ -34,7 +34,7 @@ export default function CoursesSection() {
               <div className="cf-module">Candlestick reading — without memorizing patterns</div>
               <div className="cf-module">Support &amp; resistance done right</div>
               <div className="cf-module">Trend identification and market context</div>
-              <div className="cf-module">Basic risk and capital management</div>
+              <div className="cf-module">Introduction to Fundamental Analysis</div>
               <div className="cf-module">Introduction to structured trade planning</div>
               <div className="cf-outcome">
                 <div className="cf-outcome-label">After This Program</div>
@@ -43,9 +43,8 @@ export default function CoursesSection() {
               <div className="cf-price-row">
                 <div>
                   <div style={{ ...monoSmall, marginBottom: 4 }}>PROGRAM FEE</div>
-                  <div className="cf-price">₹8,000</div>
+                  <div className="cf-price">FREE</div>
                 </div>
-                <div style={{ ...monoSmall, textAlign: "right" }}>EMI AVAILABLE<br />ON REQUEST</div>
               </div>
               <button className="btn btn-red" style={{ width: "100%" }} onClick={() => navigate("contact")}>Enroll in Foundation →</button>
             </div>
@@ -56,14 +55,14 @@ export default function CoursesSection() {
             <div className="cf-head">
               <div className="cf-level">Program 02 · Advanced · Most Popular</div>
               <div className="cf-title">Advanced</div>
-              <div className="cf-dur">12 Weeks · Online &amp; Offline</div>
+              <div className="cf-dur">4 Weeks · Online &amp; Offline</div>
             </div>
             <div className="cf-body">
               <div className="cf-for">For: Students who&apos;ve done Foundation or have basic market knowledge and want to trade professionally.</div>
               <div className="cf-modules-label">What You&apos;ll Learn</div>
               <div className="cf-module">Advanced price action and order flow concepts</div>
               <div className="cf-module">Market structure — highs, lows, and shifts</div>
-              <div className="cf-module">Institutional entry and exit behavior</div>
+              <div className="cf-module">Breakout Models</div>
               <div className="cf-module">Multi-timeframe analysis and confluence</div>
               <div className="cf-module">Building your own personal trading system</div>
               <div className="cf-module">Live trade analysis and review sessions</div>
@@ -74,7 +73,7 @@ export default function CoursesSection() {
               <div className="cf-price-row">
                 <div>
                   <div style={{ ...monoSmall, marginBottom: 4 }}>PROGRAM FEE</div>
-                  <div className="cf-price">₹15,000</div>
+                  <div className="cf-price">₹14,999</div>
                 </div>
                 <div style={{ ...monoSmall, textAlign: "right" }}>EMI AVAILABLE<br />ON REQUEST</div>
               </div>
@@ -86,18 +85,17 @@ export default function CoursesSection() {
           <div className="course-full">
             <div className="cf-head">
               <div className="cf-level">Program 03 · Mentorship</div>
-              <div className="cf-title">Mentorship</div>
-              <div className="cf-dur">3 Months Live · 12 Seats/Batch</div>
+              <div className="cf-title">ADVANCE + LIVE MARKET SESSIONS</div>
+              <div className="cf-dur">6 Weeks · 12 Seats/Batch</div>
             </div>
             <div className="cf-body">
               <div className="cf-for">For: Serious traders who want live guidance, personal trade feedback, and direct access to Akshay Sir.</div>
               <div className="cf-modules-label">What You&apos;ll Get</div>
-              <div className="cf-module">Direct access to Akshay Sir for 3 months</div>
+              <div className="cf-module">Live Trade Management and Position Handling</div>
               <div className="cf-module">Weekly live trade review sessions</div>
               <div className="cf-module">Personal trade journal review and feedback</div>
               <div className="cf-module">Real-time market analysis guidance</div>
               <div className="cf-module">Trading psychology and mindset coaching</div>
-              <div className="cf-module">Lifetime alumni group access</div>
               <div className="cf-outcome">
                 <div className="cf-outcome-label">After This Program</div>
                 <div className="cf-outcome-text">You&apos;ll trade with genuine confidence, have a refined personal system, and think like a professional every time you open a chart.</div>
@@ -105,7 +103,7 @@ export default function CoursesSection() {
               <div className="cf-price-row">
                 <div>
                   <div style={{ ...monoSmall, marginBottom: 4 }}>PROGRAM FEE</div>
-                  <div className="cf-price">₹25,000</div>
+                  <div className="cf-price">₹19,999</div>
                 </div>
                 <div style={{ ...monoSmall, textAlign: "right" }}>LIMITED TO<br />12 STUDENTS</div>
               </div>

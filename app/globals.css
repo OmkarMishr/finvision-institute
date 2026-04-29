@@ -96,7 +96,7 @@ nav.scrolled {
   gap: 32px;
 }
 /* LOGO SVG */
-.logo-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+.logo-wrap { display: flex; align-items: center; gap: -64px; cursor: pointer; }
 .logo-icon { width: 36px; height: 36px; flex-shrink: 0; }
 .logo-text {
   font-family: var(--ff-head);

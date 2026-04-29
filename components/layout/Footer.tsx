@@ -27,10 +27,9 @@ export default function Footer() {
           <div>
             <div className="footer-col-title">Programs</div>
             <div className="footer-links">
-              <a onClick={() => navigate("courses")}>Foundation Program</a>
+              <a onClick={() => navigate("contact")}>Free Demo Class</a>
               <a onClick={() => navigate("courses")}>Advanced Program</a>
               <a onClick={() => navigate("courses")}>Mentorship</a>
-              <a onClick={() => navigate("contact")}>Free Demo Class</a>
             </div>
           </div>
           <div>
@@ -46,14 +45,15 @@ export default function Footer() {
             <div className="footer-col-title">Contact</div>
             <div className="footer-links">
               <a href="tel:+918889199977">+91 88891 99977</a>
-              <a href="mailto:finvisionofficial@gmail.com">finvisionofficial@gmail.com</a>
+              <a href="tel:+918889199933">+91-88891 99933</a>
+              <a href="mailto:support@myfinvision.com">support@myfinvision.com</a>
               <a>Currency Tower, Raipur</a>
               <a>Mon–Sat · 10am–7pm</a>
             </div>
           </div>
         </div>
         <div className="footer-bottom">
-          <div className="footer-copy">© 2025 FINVISION. ALL RIGHTS RESERVED.</div>
+          <div className="footer-copy">© 2026 FINVISION. ALL RIGHTS RESERVED.</div>
           <div className="footer-disc">EDUCATION ONLY · NOT SEBI REGISTERED · NOT INVESTMENT ADVICE</div>
         </div>
       </div>

@@ -31,19 +31,19 @@ export default function CentersSection() {
             <div className="upcoming-card">
               <div className="uc-city">Bhilai</div>
               <div className="uc-badge">Coming Soon</div>
-              <div className="uc-launch">Est. Launch: Q3 2025 · Pre-registrations open</div>
+              <div className="uc-launch">Est. Launch: Q3 2026 · Pre-registrations open</div>
               <button className="btn btn-outline" style={upcomingBtn} onClick={() => navigate("contact")}>Pre-Register →</button>
             </div>
             <div className="upcoming-card">
               <div className="uc-city">Bilaspur</div>
               <div className="uc-badge">Coming Soon</div>
-              <div className="uc-launch">Est. Launch: Q4 2025 · Pre-registrations open</div>
+              <div className="uc-launch">Est. Launch: Q4 2026 · Pre-registrations open</div>
               <button className="btn btn-outline" style={upcomingBtn} onClick={() => navigate("contact")}>Pre-Register →</button>
             </div>
             <div className="upcoming-card">
               <div className="uc-city">Indore</div>
               <div className="uc-badge">Coming Soon</div>
-              <div className="uc-launch">Est. Launch: 2026 · Register interest</div>
+              <div className="uc-launch">Est. Launch: 2027 · Register interest</div>
               <button className="btn btn-outline" style={upcomingBtn} onClick={() => navigate("contact")}>Register Interest →</button>
             </div>
           </div>

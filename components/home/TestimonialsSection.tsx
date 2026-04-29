@@ -12,8 +12,8 @@ export default function TestimonialsSection() {
             <div className="testi-who">
               <div className="testi-avatar">RK</div>
               <div>
-                <div className="testi-name">Rahul Kesarwani</div>
-                <div className="testi-meta">RAIPUR · FOUNDATION BATCH 2024</div>
+                <div className="testi-name">Prashik Meshram</div>
+                <div className="testi-meta">NAGPUR · FOUNDATION BATCH 2026</div>
               </div>
             </div>
           </div>
