@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useNav } from "@/components/context/NavContext";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 import type { PageName } from "@/lib/types";
 
 const LINKS: { id: PageName; label: string }[] = [
@@ -21,14 +22,14 @@ export default function Navbar() {
         {/* ── LOGO ── */}
         <div className="logo-wrap" onClick={() => navigate("home")}>
           <Image
+            className="nav-logo-img"
             src="/Fin-logo.png"
             alt="Finvision Institute of Trading"
-            style={{ gap: 12 }}
             width={120}
             height={120}
             priority
           />
-          <div className="logo-text ">
+          <div className="logo-text">
             <span className="f">F</span>
             <span className="rest">INVISION</span>
           </div>
@@ -47,9 +48,11 @@ export default function Navbar() {
           ))}
         </div>
 
-        <button className="nav-cta" onClick={() => navigate("contact")}>
-          Enroll Now
-        </button>
+        <ThemeToggle />
+
+        <a href="https://www.crm.myfinvision.com/" className="nav-cta">
+          LOG-IN / SIGN-UP
+        </a>
 
         <button
           className="hamburger"

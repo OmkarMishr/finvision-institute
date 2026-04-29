@@ -1,4 +1,5 @@
 import { useNav } from "@/components/context/NavContext";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 import type { PageName } from "@/lib/types";
 
 const LINKS: { id: PageName; label: string }[] = [
@@ -25,6 +26,7 @@ export default function MobileMenu() {
           Enroll Now →
         </button>
       </div>
+      <ThemeToggle className="theme-toggle-mobile" />
     </div>
   );
 }
