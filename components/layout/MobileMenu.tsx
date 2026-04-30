@@ -22,11 +22,10 @@ export default function MobileMenu() {
         </a>
       ))}
       <div style={{ marginTop: 28 }}>
-        <button className="btn btn-red" onClick={() => navigate("contact")}>
-          Enroll Now →
+        <button className="btn btn-red" onClick={() =>  window.open("https://www.crm.myfinvision.com/", "_blank", "noopener,noreferrer")}>
+           Log In / Sign Up
         </button>
       </div>
-      <ThemeToggle className="theme-toggle-mobile" />
     </div>
   );
 }
