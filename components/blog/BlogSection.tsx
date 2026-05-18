@@ -1,8 +1,15 @@
+import Image from "next/image";
 import { useNav } from "@/components/context/NavContext";
 import { POSTS } from "@/lib/data";
+import { Post } from "@/lib/types";
 import { openWA } from "@/lib/wa";
 
-export default function BlogSection({ blogCat }: { blogCat: string }) {
+type Props = {
+  blogCat: string;
+  onPostClick: (post: Post) => void;
+};
+
+export default function BlogSection({ blogCat, onPostClick }: Props) {
   const { navigate } = useNav();
   const posts = blogCat === "All" ? POSTS : POSTS.filter((p) => p.cat === blogCat);
 
@@ -11,9 +18,12 @@ export default function BlogSection({ blogCat }: { blogCat: string }) {
       <div className="wrap">
         <div className="blog-grid" id="blog-grid">
           {posts.map((p, i) => (
-            <div key={i} className="blog-card">
+            <div key={i} className="blog-card" onClick={() => onPostClick(p)} role="button" tabIndex={0} onKeyDown={(e) => e.key === "Enter" && onPostClick(p)}>
               <div className="blog-thumb">
-                <div className="blog-thumb-bg"></div>
+                {p.image
+                  ? <Image src={p.image} alt={p.title} fill className="blog-thumb-img" />
+                  : <div className="blog-thumb-bg"></div>
+                }
                 <span className="blog-thumb-text">{p.cat}</span>
               </div>
               <div className="blog-card-body">
@@ -24,6 +34,7 @@ export default function BlogSection({ blogCat }: { blogCat: string }) {
                   <span>By {p.author}</span>
                   <span>{p.read} read</span>
                 </div>
+                <div className="blog-card-read-link">READ ARTICLE &rarr;</div>
               </div>
             </div>
           ))}

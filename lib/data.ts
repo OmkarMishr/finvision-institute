@@ -29,13 +29,41 @@ export const FAQS = [
 ];
 
 export const POSTS = [
-  { cat: "Beginner Trading", title: "Why 90% Traders Lose Money (And How to Avoid It)", excerpt: "The real reason isn't bad luck or a bad market. It's a fundamental misunderstanding of what trading actually is.", read: "5 min", author: "Akshay Sir" },
-  { cat: "Price Action", title: "What Is Price Action Trading? A Simple Explanation", excerpt: "Forget indicators for a moment. Price action is the only thing that tells you what the market is actually doing right now.", read: "7 min", author: "Mahesh Sir" },
-  { cat: "Trading Psychology", title: "Why You Panic in Trades (And How to Fix It)", excerpt: "Panic in trading is almost never about the trade itself. It's about the gap between your plan and your preparation.", read: "6 min", author: "Rohit Gupta" },
-  { cat: "Market Analysis", title: "How Market Structure Actually Works", excerpt: "Higher highs, lower lows — but what does it really mean for where price is going? Let's break it down clearly.", read: "8 min", author: "Akshay Sir" },
-  { cat: "Beginner Trading", title: "Trading vs Gambling: The Truth Nobody Tells You", excerpt: "Most people draw the wrong line between these two. Understanding the real difference changes every trade you make.", read: "5 min", author: "Mahesh Sir" },
-  { cat: "Price Action", title: "Support & Resistance: The Only Levels That Matter", excerpt: "Not every level on your chart deserves attention. Here's how to find the ones that actually do.", read: "9 min", author: "Akshay Sir" },
-  { cat: "Trading Psychology", title: "Discipline in Trading: What It Actually Means", excerpt: "Real discipline means knowing your edge and trusting the process even when it's uncomfortable. Here's how.", read: "7 min", author: "Akshay Sir" },
+  {
+    id: "what-is-forex-trading",
+    cat: "Beginner Trading",
+    title: "",
+    subtitle: "",
+    excerpt: "Over the last few years, forex trading has become one of the most talked-about ways of online trading in India. Many students, working professionals, and business owners are now exploring the forex market to understand how currency trading works and whether it can become a source of income.",
+    read: "5 min",
+    author: "Akshay Sir",
+    date: "Apr 12, 2026",
+    image: "/blog-forex-trading.jpg",
+    body: [
+      "Over the last few years, forex trading has become one of the most talked-about ways of online trading in India. Many students, working professionals, and business owners are now exploring the forex market to understand how currency trading works and whether it can become a source of income.",
+      "In simple language, forex trading means exchanging one currency for another to earn profit from price movement. Traders buy currencies at one price and try to sell them later at a better price. The forex market is the biggest financial market in the world because currencies are traded globally every second. Banks, companies, governments, and retail traders all participate in this market daily.",
+      "## Understanding the Forex Market",
+      "The word ‘Forex’ comes from ‘Foreign Exchange.’ It refers to the exchange of currencies between countries. Currencies are traded in pairs such as EUR/USD, GBP/USD, USD/JPY, and USD/INR — meaning one currency is compared against another. If EUR/USD moves upward, the Euro is becoming stronger compared to the US Dollar, and this movement creates trading opportunities.",
+      "## How Forex Trading Works",
+      "A trader predicts whether a currency pair will go up or down. If the trader believes the price will rise, they place a buy trade. If they believe the price will fall, they place a sell trade. The difference between the buying and selling price becomes the profit or loss. For example, if USD/INR is at 83.00 and you expect the dollar to strengthen, you buy the pair. If it rises to 83.50, you close the trade in profit.",
+      "## Why is Forex Trading Popular?",
+      "The forex market attracts millions of traders for several reasons. It runs almost 24 hours a day during weekdays, giving flexibility to students, working professionals, and part-time traders. The market has extremely high trading volume, so trades execute quickly and price manipulation is lower compared to smaller markets. Many beginners are also attracted by the relatively smaller capital needed to start — but proper learning should always come before investing real money.",
+      "## Forex Trading Basics Every Beginner Should Learn",
+      "Currency pairs are at the heart of every forex trade. The base currency and the quote currency make up each pair, and understanding how they move relative to each other is the first step. A pip is the smallest unit of price movement, while lot size refers to the quantity of currency being traded. Beginners usually start with micro or mini lots to reduce risk exposure.",
+      "Leverage allows traders to control larger positions using smaller capital. While this can amplify profits, it equally amplifies losses — and beginners who misuse leverage often wipe accounts before learning anything. Use leverage carefully and always within a defined risk framework.",
+      "## How Beginners Can Start Forex Trading",
+      "Start by building foundational knowledge — market trends, risk management, trading psychology, and reading charts. Then practice on a demo account to understand the trading platform and test strategies without risking real money. Once comfortable, develop a trading strategy. Successful traders do not trade randomly. Common beginner strategies include trend trading, breakout trading, and support-resistance based entries.",
+      "The most critical step is focusing on risk management. Never risk all your capital in a single trade, always use a stop loss, and avoid emotional decisions. Poor risk management is the single biggest reason traders fail — not a lack of profitable setups.",
+      "## Is Forex Trading Legal in India?",
+      "Forex trading is legal in India when done according to RBI and SEBI guidelines through authorised brokers and approved currency pairs. Traders should always avoid unregulated platforms and unknown brokers. Learning the legal framework of currency trading is an important step before committing real capital.",
+      "## Is Forex Trading Profitable?",
+      "Forex trading has the potential to become profitable, but it is not a guaranteed income source. Many people enter expecting fast money. In reality, trading requires skill, discipline, practice, and emotional control. Experienced traders spend years refining their strategies and deepening their understanding of market behaviour. Success in trading comes from consistency and structured learning — not luck.",
+      "Common beginner mistakes to avoid: trading without knowledge, overusing leverage, making emotional decisions, trading without a plan, and ignoring risk management. Each of these is avoidable with proper education and honest self-assessment.",
+      "## Why Forex Education Matters",
+      "The forex market is highly competitive, and proper education can save beginners from expensive mistakes. Learning from experienced mentors and studying real market conditions builds both confidence and decision-making ability. A structured forex trading course covers technical analysis, trading psychology, risk management, and live market exposure. Rather than following random signals online, focus on building knowledge that will serve you for years — that is the foundation every successful trader is built on.",
+    ],
+  },
+ 
 ];
 
 export const CATS = ["All", "Beginner Trading", "Price Action", "Trading Psychology", "Market Analysis"];
