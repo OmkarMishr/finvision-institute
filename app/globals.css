@@ -619,7 +619,7 @@ nav.scrolled {
    COURSES PAGE
 ══════════════════════════════════════ */
 .courses-all { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 56px; }
-.course-full { background: var(--black2); overflow: hidden; transition: transform 0.3s ease; position: relative; }
+.course-full { background: var(--black2); overflow: hidden; transition: transform 0.3s ease; position: relative; border-radius: 20px; display: flex; flex-direction: column; }
 .course-full:hover { transform: scale(1.03); z-index: 1; }
 .course-full.feat { background: var(--black3); }
 .cf-head { padding: 32px 28px; border-bottom: 1px solid var(--border); position: relative; }
@@ -627,7 +627,8 @@ nav.scrolled {
 .cf-level { font-family: var(--ff-mono); font-size: 10px; color: var(--red); letter-spacing: 0.12em; margin-bottom: 12px; }
 .cf-title { font-family: var(--ff-head); font-size: 1.8rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 6px; }
 .cf-dur { font-family: var(--ff-mono); font-size: 11px; color: var(--grey2); }
-.cf-body { padding: 28px; }
+.cf-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+.cf-body .btn { margin-top: auto; }
 .cf-for { font-size: 13px; color: var(--grey); margin-bottom: 24px; font-style: italic; }
 .cf-modules-label { font-family: var(--ff-mono); font-size: 10px; color: var(--grey2); letter-spacing: 0.1em; margin-bottom: 12px; }
 .cf-module { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--grey); }

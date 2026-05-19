@@ -70,11 +70,7 @@ export default function CoursesSection({ onEnroll }: Props) {
                 <div className="cf-outcome-text">You&apos;ll have a personal trading system, understand institutional behaviour, and identify high-probability setups independently.</div>
               </div>
               <div className="cf-price-row">
-                <div>
-                  <div style={{ ...monoSmall, marginBottom: 4 }}>PROGRAM FEE</div>
-                  <div className="cf-price">₹14,999</div>
-                </div>
-                <div style={{ ...monoSmall, textAlign: "right" }}>EMI AVAILABLE<br />ON REQUEST</div>
+                
               </div>
               <button className="btn btn-red" style={{ width: "100%" }} onClick={() => onEnroll(advance)}>
                 BUY COURSE NOW →
@@ -102,10 +98,6 @@ export default function CoursesSection({ onEnroll }: Props) {
                 <div className="cf-outcome-text">You&apos;ll trade with genuine confidence, have a refined personal system, and think like a professional every time you open a chart.</div>
               </div>
               <div className="cf-price-row">
-                <div>
-                  <div style={{ ...monoSmall, marginBottom: 4 }}>PROGRAM FEE</div>
-                  <div className="cf-price">₹19,999</div>
-                </div>
                 <div style={{ ...monoSmall, textAlign: "right" }}>LIMITED TO<br />12 STUDENTS</div>
               </div>
               <button className="btn btn-red" style={{ width: "100%" }} onClick={() => onEnroll(advanceLive)}>
