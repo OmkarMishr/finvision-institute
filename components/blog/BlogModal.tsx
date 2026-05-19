@@ -54,13 +54,26 @@ export default function BlogModal({ post, onClose }: Props) {
         </div>
 
         <div className="blog-modal-body">
-          {post.body.map((item, i) =>
-            item.startsWith("## ") ? (
-              <div key={i} className="blog-modal-section-head">{item.slice(3)}</div>
-            ) : (
-              <p key={i} className="blog-modal-para">{item}</p>
-            )
-          )}
+          {post.body.map((item, i) => {
+            if (typeof item === "object") {
+              return (
+                <div key={i} className="blog-modal-img-wrap">
+                  <Image
+                    src={item.img}
+                    alt={item.alt}
+                    width={760}
+                    height={428}
+                    style={{ width: "100%", height: "auto" }}
+                    className="blog-modal-inline-img"
+                  />
+                </div>
+              );
+            }
+            if (item.startsWith("## ")) {
+              return <div key={i} className="blog-modal-section-head">{item.slice(3)}</div>;
+            }
+            return <p key={i} className="blog-modal-para">{item}</p>;
+          })}
         </div>
 
       </div>

@@ -115,15 +115,20 @@ nav.scrolled {
   width: 100%; display: flex; align-items: center; justify-content: space-between;
   gap: 32px;
 }
-/* LOGO SVG */
+/* LOGO */
 .logo-wrap { display: flex; align-items: center; gap: 0; cursor: pointer; }
 .logo-icon { width: 36px; height: 36px; flex-shrink: 0; }
-.nav-logo-img {
-  height: 120px;
-  width: auto;
-  display: block;
-  margin-right: -14px;
+/* White-background removal: invert+hue-rotate turns white→black, screen blend makes black transparent on dark bg */
+.brand-icon {
+  display: block; flex-shrink: 0; object-fit: contain;
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
+  align-self: center;
 }
+[data-theme="light"] .brand-icon { filter: none; mix-blend-mode: normal; }
+/* Icon must stay within nav height (68px) so flex centering works */
+.brand-icon--nav    { height: 66px; width: 53px; margin-right: -10px; }
+.brand-icon--footer { height: 60px; width: 48px; margin-right: -9px; }
 .logo-text {
   font-family: var(--ff-head);
   font-size: 1.6rem;
@@ -131,7 +136,9 @@ nav.scrolled {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   line-height: 1;
+  align-self: center;
 }
+.logo-text--lg { font-size: 2rem; }
 .logo-text .f { color: var(--red); }
 .logo-text .rest { color: var(--white); }
 .nav-links { display: flex; align-items: center; gap: 32px; }
@@ -611,8 +618,9 @@ nav.scrolled {
 /* ══════════════════════════════════════
    COURSES PAGE
 ══════════════════════════════════════ */
-.courses-all { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); margin-top: 56px; }
-.course-full { background: var(--black2); overflow: hidden; }
+.courses-all { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 56px; }
+.course-full { background: var(--black2); overflow: hidden; transition: transform 0.3s ease; position: relative; }
+.course-full:hover { transform: scale(1.03); z-index: 1; }
 .course-full.feat { background: var(--black3); }
 .cf-head { padding: 32px 28px; border-bottom: 1px solid var(--border); position: relative; }
 .cf-head::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--red); }
@@ -743,6 +751,12 @@ nav.scrolled {
   padding-left: 14px; border-left: 3px solid var(--red);
 }
 .blog-modal-section-head:first-child { margin-top: 0; }
+.blog-modal-img-wrap {
+  margin: 20px 0 24px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.blog-modal-inline-img { display: block; }
 .blog-modal-para {
   font-size: 15px; color: var(--grey); line-height: 1.88;
   font-weight: 300; margin-bottom: 22px;
@@ -811,6 +825,146 @@ footer { background: var(--black2); border-top: 1px solid var(--border); padding
 .footer-disc { font-family: var(--ff-mono); font-size: 11px; color: var(--grey3); }
 
 /* ══════════════════════════════════════
+   COURSE PRICING CARDS
+══════════════════════════════════════ */
+.cp-section { padding: 64px 0 48px; }
+.cp-header { text-align: center; margin-bottom: 48px; }
+.cp-header-mono { font-family: var(--ff-mono); font-size: 10px; color: var(--red); letter-spacing: 0.15em; margin-bottom: 12px; }
+.cp-header-title { font-family: var(--ff-head); font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 12px; }
+.cp-header-sub { font-size: 14px; color: var(--grey2); font-weight: 300; }
+.cp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); }
+.cp-card { background: var(--black3); position: relative; overflow: hidden; display: flex; flex-direction: column; }
+.cp-featured { border-top: 3px solid var(--red); }
+.cp-ribbon { position: absolute; top: 0; right: 0; width: 88px; height: 88px; overflow: hidden; pointer-events: none; }
+.cp-ribbon-text {
+  position: absolute; top: 20px; right: -24px;
+  background: var(--red); color: #fff;
+  font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.08em;
+  padding: 5px 0; width: 112px; text-align: center;
+  transform: rotate(45deg);
+}
+.cp-body { padding: 32px; flex: 1; display: flex; flex-direction: column; }
+.cp-plan-tag { font-family: var(--ff-mono); font-size: 10px; color: var(--grey2); letter-spacing: 0.1em; margin-bottom: 10px; }
+.cp-name { font-family: var(--ff-head); font-size: 2rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+.cp-dur { font-family: var(--ff-mono); font-size: 10px; color: var(--grey2); letter-spacing: 0.08em; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+.cp-price-block { margin-bottom: 24px; }
+.cp-original { font-family: var(--ff-mono); font-size: 12px; color: var(--grey3); text-decoration: line-through; margin-bottom: 4px; }
+.cp-price { font-family: var(--ff-head); font-size: 2.4rem; font-weight: 900; letter-spacing: 0.02em; }
+.cp-price--free { color: var(--red); }
+.cp-features { list-style: none; margin: 0 0 28px; padding: 0; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.cp-feature { font-size: 13px; color: var(--grey); font-weight: 300; padding-left: 18px; position: relative; line-height: 1.5; }
+.cp-feature::before { content: '▸'; color: var(--red); position: absolute; left: 0; top: 0; }
+.cp-cta {
+  width: 100%; padding: 14px;
+  background: linear-gradient(135deg, #c0334d 0%, #e55a7a 100%);
+  color: #fff; font-family: var(--ff-head); font-size: 1rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  border: none; cursor: pointer; transition: opacity 0.2s;
+  clip-path: polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%);
+}
+.cp-cta:hover { opacity: 0.88; }
+.cp-secure-note {
+  text-align: center; margin-top: 20px;
+  font-family: var(--ff-mono); font-size: 10px; color: var(--grey3);
+  letter-spacing: 0.12em;
+}
+
+/* ══════════════════════════════════════
+   ENROLLMENT MODAL
+══════════════════════════════════════ */
+.enroll-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.88); backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px; overflow-y: auto;
+}
+.enroll-close {
+  position: fixed; top: 18px; right: 18px; z-index: 2100;
+  width: 36px; height: 36px; background: var(--black3);
+  border: 1px solid var(--border); color: var(--grey);
+  font-size: 14px; cursor: pointer; font-family: var(--ff-body);
+  clip-path: polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.enroll-close:hover { background: var(--red); border-color: var(--red); color: #fff; }
+.enroll-modal {
+  background: var(--black2); width: 100%; max-width: 540px;
+  border-top: 3px solid var(--red); position: relative;
+  max-height: 90vh; overflow-y: auto;
+}
+.enroll-steps {
+  display: flex; align-items: center; padding: 20px 28px;
+  background: var(--black3); border-bottom: 1px solid var(--border);
+}
+.enroll-step { display: flex; align-items: center; gap: 10px; }
+.enroll-step-dot {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--black4); border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-mono); font-size: 11px; color: var(--grey2);
+  flex-shrink: 0; transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+.enroll-step.active .enroll-step-dot { background: var(--red); border-color: var(--red); color: #fff; }
+.enroll-step-label { font-family: var(--ff-mono); font-size: 10px; color: var(--grey2); letter-spacing: 0.08em; white-space: nowrap; }
+.enroll-step.active .enroll-step-label { color: var(--white); }
+.enroll-step-line { flex: 1; height: 1px; background: var(--border); margin: 0 16px; }
+.enroll-course-banner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 28px; background: var(--black4);
+  border-left: 3px solid var(--red); border-bottom: 1px solid var(--border);
+}
+.enroll-banner-plan { font-family: var(--ff-head); font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; }
+.enroll-banner-price { font-family: var(--ff-head); font-size: 1.4rem; font-weight: 900; color: var(--red); }
+.enroll-form { padding: 28px; }
+.enroll-form-group { margin-bottom: 18px; }
+.enroll-form-group .form-input,
+.enroll-form-group .form-select { margin-bottom: 0; }
+.enroll-phone-wrap { display: flex; align-items: stretch; }
+.enroll-phone-prefix {
+  background: var(--black4); border: 1px solid var(--border); border-right: none;
+  padding: 12px 14px; font-family: var(--ff-mono); font-size: 13px;
+  color: var(--grey2); white-space: nowrap; display: flex; align-items: center; flex-shrink: 0;
+}
+.enroll-phone-wrap .form-input { border-left: none; flex: 1; margin-bottom: 0; }
+.enroll-submit-btn {
+  width: 100%; padding: 16px; margin-top: 10px;
+  background: linear-gradient(135deg, #c0334d 0%, #e55a7a 100%);
+  color: #fff; font-family: var(--ff-head); font-size: 1.05rem;
+  font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;
+  border: none; cursor: pointer; transition: opacity 0.2s;
+  clip-path: polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%);
+}
+.enroll-submit-btn:hover { opacity: 0.9; }
+.enroll-success { padding: 48px 28px; text-align: center; }
+.enroll-success-icon {
+  width: 72px; height: 72px; background: rgba(192,51,77,0.12);
+  border: 2px solid var(--red); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; color: var(--red); margin: 0 auto 24px;
+}
+.enroll-success-title { font-family: var(--ff-head); font-size: 1.6rem; font-weight: 900; text-transform: uppercase; margin-bottom: 14px; }
+.enroll-success-text { font-size: 14px; color: var(--grey); line-height: 1.7; margin-bottom: 28px; }
+.enroll-payment { padding: 28px; }
+.enroll-payment-title { font-family: var(--ff-head); font-size: 1.4rem; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; }
+.enroll-payment-note { font-size: 13px; color: var(--grey); margin-bottom: 24px; line-height: 1.6; }
+.enroll-qr-wrap {
+  width: 200px; height: 200px; margin: 0 auto 20px;
+  background: #fff; display: flex; align-items: center; justify-content: center;
+  border: 4px solid var(--red);
+}
+.enroll-qr-img { display: block; }
+.enroll-upi-row {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  font-family: var(--ff-mono); font-size: 12px;
+  background: var(--black3); border: 1px solid var(--border);
+  padding: 12px 20px; margin-bottom: 20px;
+}
+.enroll-upi-label { color: var(--grey2); letter-spacing: 0.08em; }
+.enroll-upi-val { color: var(--red); letter-spacing: 0.1em; }
+.enroll-payment-after { font-size: 13px; color: var(--grey); line-height: 1.6; margin-bottom: 24px; text-align: center; }
+.enroll-wa-btn { display: block; text-align: center; }
+
+/* ══════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════ */
 @media(max-width:1000px) {
@@ -819,7 +973,7 @@ footer { background: var(--black2); border-top: 1px solid var(--border); padding
   .hero h1{font-size:clamp(2.8rem,9vw,5rem)}
   .stats-grid,.courses-grid,.testi-grid,.journey-steps,.problem-grid,.solution-grid,
   .inst-grid,.about-story-grid,.founder-grid,.team-grid,.phil-grid,.cities-grid,
-  .courses-all,.contact-layout,.centers-grid{grid-template-columns:1fr;gap:2px}
+  .courses-all,.contact-layout,.centers-grid,.cp-grid{grid-template-columns:1fr;gap:2px}
   .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
   .courses-grid{background:transparent;gap:2px}
   section{padding:72px 0}

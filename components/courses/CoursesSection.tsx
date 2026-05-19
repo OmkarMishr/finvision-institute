@@ -1,30 +1,27 @@
-import { useNav } from "@/components/context/NavContext";
-import { openWA } from "@/lib/wa";
+import { COURSE_PLANS } from "@/lib/data";
+import { CoursePlan } from "@/lib/types";
 
 const monoSmall = { fontFamily: "var(--ff-mono)", fontSize: 10, color: "var(--grey2)" } as const;
-const monoRed = { fontFamily: "var(--ff-mono)", fontSize: 10, color: "var(--red)", letterSpacing: "0.12em", marginBottom: 8 } as const;
-const headBig = { fontFamily: "var(--ff-head)", fontWeight: 800, textTransform: "uppercase" } as const;
 
-export default function CoursesSection() {
-  const { navigate } = useNav();
+type Props = {
+  onEnroll: (plan: CoursePlan) => void;
+};
+
+export default function CoursesSection({ onEnroll }: Props) {
+  const demo = COURSE_PLANS.find((p) => p.id === "demo")!;
+  const advance = COURSE_PLANS.find((p) => p.id === "advance")!;
+  const advanceLive = COURSE_PLANS.find((p) => p.id === "advance-live")!;
+
   return (
     <section>
       <div className="wrap">
-        <div className="upgrade-box">
-          <div>
-            <div style={monoRed}>ALREADY A STUDENT?</div>
-            <div style={{ ...headBig, fontSize: "1.4rem", marginBottom: 6 }}>Ready to Upgrade?</div>
-            <p style={{ fontSize: 14, maxWidth: 480 }}>Existing Finvision students get priority enrollment and alumni consideration on higher programs. Talk to your mentor.</p>
-          </div>
-          <button className="btn btn-red" onClick={openWA}>Talk to Your Mentor →</button>
-        </div>
-
         <div className="courses-all">
-          {/* Foundation */}
+
+          {/* ── DEMO COURSE ── */}
           <div className="course-full">
             <div className="cf-head">
               <div className="cf-level">Program 01 · Beginner</div>
-              <div className="cf-title">DEMO</div>
+              <div className="cf-title">DEMO COURSE</div>
               <div className="cf-dur">5 Days · Online &amp; Offline</div>
             </div>
             <div className="cf-body">
@@ -46,19 +43,21 @@ export default function CoursesSection() {
                   <div className="cf-price">FREE</div>
                 </div>
               </div>
-              <button className="btn btn-red" style={{ width: "100%" }} onClick={() => navigate("contact")}>Enroll in Foundation →</button>
+              <button className="btn btn-red" style={{ width: "100%" }} onClick={() => onEnroll(demo)}>
+                GET FOR FREE →
+              </button>
             </div>
           </div>
 
-          {/* Advanced */}
+          {/* ── ADVANCE COURSE ── */}
           <div className="course-full feat">
             <div className="cf-head">
               <div className="cf-level">Program 02 · Advanced · Most Popular</div>
-              <div className="cf-title">Advanced</div>
+              <div className="cf-title">ADVANCE COURSE</div>
               <div className="cf-dur">4 Weeks · Online &amp; Offline</div>
             </div>
             <div className="cf-body">
-              <div className="cf-for">For: Students who&apos;ve done Foundation or have basic market knowledge and want to trade professionally.</div>
+              <div className="cf-for">For: Students who&apos;ve done the Demo or have basic market knowledge and want to trade professionally.</div>
               <div className="cf-modules-label">What You&apos;ll Learn</div>
               <div className="cf-module">Advanced price action and order flow concepts</div>
               <div className="cf-module">Market structure — highs, lows, and shifts</div>
@@ -68,7 +67,7 @@ export default function CoursesSection() {
               <div className="cf-module">Live trade analysis and review sessions</div>
               <div className="cf-outcome">
                 <div className="cf-outcome-label">After This Program</div>
-                <div className="cf-outcome-text">You&apos;ll have a personal trading system, understand institutional behavior, and identify high-probability setups independently.</div>
+                <div className="cf-outcome-text">You&apos;ll have a personal trading system, understand institutional behaviour, and identify high-probability setups independently.</div>
               </div>
               <div className="cf-price-row">
                 <div>
@@ -77,11 +76,13 @@ export default function CoursesSection() {
                 </div>
                 <div style={{ ...monoSmall, textAlign: "right" }}>EMI AVAILABLE<br />ON REQUEST</div>
               </div>
-              <button className="btn btn-red" style={{ width: "100%" }} onClick={() => navigate("contact")}>Enroll in Advanced →</button>
+              <button className="btn btn-red" style={{ width: "100%" }} onClick={() => onEnroll(advance)}>
+                BUY COURSE NOW →
+              </button>
             </div>
           </div>
 
-          {/* Mentorship */}
+          {/* ── ADVANCE + LIVE MARKET SESSIONS ── */}
           <div className="course-full">
             <div className="cf-head">
               <div className="cf-level">Program 03 · Mentorship</div>
@@ -107,21 +108,12 @@ export default function CoursesSection() {
                 </div>
                 <div style={{ ...monoSmall, textAlign: "right" }}>LIMITED TO<br />12 STUDENTS</div>
               </div>
-              <button className="btn btn-red" style={{ width: "100%" }} onClick={() => navigate("contact")}>Apply for Mentorship →</button>
+              <button className="btn btn-red" style={{ width: "100%" }} onClick={() => onEnroll(advanceLive)}>
+                BUY COURSE NOW →
+              </button>
             </div>
           </div>
-        </div>
 
-        <div style={{ background: "var(--black3)", border: "1px solid var(--border)", borderLeft: "3px solid var(--red)", padding: 40, marginTop: 2, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 24 }}>
-          <div>
-            <div style={monoRed}>NOT SURE WHICH PROGRAM?</div>
-            <div style={{ ...headBig, fontSize: "1.5rem", marginBottom: 8 }}>Attend a Free Demo Class First</div>
-            <p style={{ fontSize: 14, maxWidth: 480 }}>60-minute session. Experience the teaching style. Decide which program fits your level. No commitment.</p>
-          </div>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <button className="btn btn-red" onClick={() => navigate("contact")}>Book Free Demo →</button>
-            <button className="btn btn-wapp" onClick={openWA}>WhatsApp to Book</button>
-          </div>
         </div>
       </div>
     </section>

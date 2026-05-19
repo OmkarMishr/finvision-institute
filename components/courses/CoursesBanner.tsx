@@ -1,8 +1,10 @@
-import { useNav } from "@/components/context/NavContext";
 import { openWA } from "@/lib/wa";
 
-export default function CoursesBanner() {
-  const { navigate } = useNav();
+type Props = {
+  onBookDemo: () => void;
+};
+
+export default function CoursesBanner({ onBookDemo }: Props) {
   return (
     <div className="page-banner" data-letter="C">
       <div className="wrap">
@@ -14,7 +16,7 @@ export default function CoursesBanner() {
         </p>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
           <button className="btn btn-wapp" onClick={openWA}>Ask Which Program Fits You</button>
-          <button className="btn btn-outline" onClick={() => navigate("contact")}>Book Free Demo Class</button>
+          <button className="btn btn-outline" onClick={onBookDemo}>Book Free Demo Class</button>
         </div>
       </div>
     </div>

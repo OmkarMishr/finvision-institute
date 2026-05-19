@@ -20,16 +20,16 @@ export default function Navbar() {
       <div className="nav-inner">
 
         {/* ── LOGO ── */}
-        <div className="logo-wrap" onClick={() => navigate("home")} style={{ gap: '0px' }}>
+        <div className="logo-wrap" onClick={() => navigate("home")}>
           <Image
-  className="nav-logo-img invert"
-  src="/Fin-logo.png"
-  alt="Finvision Institute of Trading"
-  width={120}
-  height={120}
-  priority
-/>
-          <div className="logo-text">
+            className="brand-icon brand-icon--nav"
+            src="/finvision-icon.png"
+            alt="Finvision"
+            width={116}
+            height={145}
+            priority
+          />
+          <div className="logo-text logo-text--lg">
             <span className="f">F</span>
             <span className="rest">INVISION</span>
           </div>

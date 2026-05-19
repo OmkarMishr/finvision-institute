@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { useNav } from "@/components/context/NavContext";
-import LogoSVG from "@/components/ui/LogoSVG";
 import { openWA } from "@/lib/wa";
 
 export default function Footer() {
@@ -11,7 +11,13 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="logo-wrap">
-              <LogoSVG />
+              <Image
+                className="brand-icon brand-icon--footer"
+                src="/finvision-icon.png"
+                alt="Finvision"
+                width={92}
+                height={115}
+              />
               <div className="logo-text">
                 <span className="f">F</span>
                 <span className="rest">INVISION</span>
