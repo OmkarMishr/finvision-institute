@@ -18,12 +18,6 @@ export default function TeamSection() {
             <div className="team-role">Senior Mentor</div>
             <div className="team-desc">12+ years in commodity and currency markets. Expert in risk management frameworks and systematic trading approaches.</div>
           </div>
-          <div className="team-card">
-            <div className="team-avatar-box">DP</div>
-            <div className="team-name">Disha Patel</div>
-            <div className="team-role">Mentor &amp; Student Success</div>
-            <div className="team-desc">4 years trading equity derivatives. Focuses on options structure, discipline training, and beginner-to-intermediate transition.</div>
-          </div>
         </div>
       </div>
     </section>

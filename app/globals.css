@@ -286,6 +286,8 @@ nav.scrolled {
   position: relative; overflow: hidden;
   padding-top: var(--nav-h);
 }
+/* stretch wrap to full width inside flex hero so left edge matches other sections */
+.hero .wrap { width: 100%; }
 /* diagonal red accent */
 .hero::before {
   content: '';
@@ -579,7 +581,7 @@ nav.scrolled {
 
 /* TEAM */
 .team-sec { background: var(--black2); }
-.team-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); margin-top: 56px; }
+.team-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; background: var(--border); margin-top: 56px; }
 .team-card { background: var(--black3); padding: 32px 24px; }
 .team-avatar-box {
   width: 72px; height: 72px;
