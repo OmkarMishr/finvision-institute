@@ -25,4 +25,6 @@ export type Post = {
   body: BlogBodyItem[];
   image?: string;
   subtitle?: string;
+  metaTitle?: string;
+  metaDescription?: string;
 };

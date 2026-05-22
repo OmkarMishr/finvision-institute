@@ -653,7 +653,7 @@ nav.scrolled {
   cursor: pointer; border: none; transition: all 0.2s;
 }
 .cat-btn.active, .cat-btn:hover { background: var(--red); color: var(--white); }
-.blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); margin-top: 2px; }
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2px; background: var(--border); margin-top: 2px; }
 .blog-card { background: var(--black3); cursor: pointer; transition: background 0.2s; overflow: hidden; }
 .blog-card:hover { background: var(--black4); }
 .blog-thumb {
