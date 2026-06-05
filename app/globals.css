@@ -100,10 +100,11 @@ body::before {
 /* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  height: var(--nav-h);
+  height: 120px; padding: 0 28px;
   display: flex; align-items: center;
   transition: background 0.3s, border-color 0.3s;
   border-bottom: 1px solid transparent;
+  padding-bottom: 30px;
 }
 nav.scrolled {
   background: var(--nav-bg);
@@ -128,7 +129,10 @@ nav.scrolled {
 [data-theme="light"] .brand-icon { filter: none; mix-blend-mode: normal; }
 /* Icon must stay within nav height (68px) so flex centering works */
 .brand-icon--nav    { height: 66px; width: 53px; margin-right: -10px; }
-.brand-icon--footer { height: 60px; width: 48px; margin-right: -9px; }
+.brand-icon--footer { height: 60px; width: 48px; margin-right: -9px; color: #1a1a1a;}
+[data-theme="dark"] .brand-icon--footer {
+  color: #ffffff; /* white text in dark mode */
+}
 .logo-text {
   font-family: var(--ff-head);
   font-size: 1.6rem;

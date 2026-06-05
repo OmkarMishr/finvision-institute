@@ -13,15 +13,13 @@ export default function Footer() {
             <div className="logo-wrap">
               <Image
                 className="brand-icon brand-icon--footer"
-                src="/finvision-icon.png"
+                src="/fin-logo.svg"
                 alt="Finvision"
-                width={92}
-                height={115}
+                width={400}
+                height={200}
+                objectFit="contain"
+                style={{ width: 'auto', height: 'auto', maxHeight: '200px' }}
               />
-              <div className="logo-text">
-                <span className="f">F</span>
-                <span className="rest">INVISION</span>
-              </div>
             </div>
             <p>Real market education from practitioners who trade. Based in Raipur, expanding across India.</p>
             <div style={{ marginTop: 20 }}>

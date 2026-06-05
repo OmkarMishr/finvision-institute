@@ -4,10 +4,10 @@ import ThemeToggle from "@/components/ui/ThemeToggle";
 import type { PageName } from "@/lib/types";
 
 const LINKS: { id: PageName; label: string }[] = [
-  { id: "home",    label: "Home" },
-  { id: "about",   label: "About" },
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
   { id: "courses", label: "Courses" },
-  { id: "blog",    label: "Blog" },
+  { id: "blog", label: "Blog" },
   { id: "centers", label: "Centers" },
   { id: "contact", label: "Contact" },
 ];
@@ -20,20 +20,15 @@ export default function Navbar() {
       <div className="nav-inner">
 
         {/* ── LOGO ── */}
-        <div className="logo-wrap" onClick={() => navigate("home")}>
-          <Image
-            className="brand-icon brand-icon--nav"
-            src="/finvision-icon.png"
-            alt="Finvision"
-            width={116}
-            height={145}
-            priority
-          />
-          <div className="logo-text logo-text--lg">
-            <span className="f">F</span>
-            <span className="rest">INVISION</span>
-          </div>
-        </div>
+        <Image
+          className="brand-icon brand-icon--nav"
+          src="/fin-logo.svg"
+          alt="Finvision"
+          width={400}
+          height={200}
+          objectFit="contain"
+          style={{ width: 'auto', height: 'auto', maxHeight: '200px' }}
+        />
 
         <div className="nav-links">
           {LINKS.map((l) => (
