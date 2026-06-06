@@ -758,6 +758,11 @@ nav.scrolled {
   padding-left: 14px; border-left: 3px solid var(--red);
 }
 .blog-modal-section-head:first-child { margin-top: 0; }
+.blog-modal-sub-head {
+  font-family: var(--ff-head); font-size: 1rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--red); margin: 28px 0 10px;
+}
 .blog-modal-img-wrap {
   margin: 20px 0 24px;
   border: 1px solid var(--border);
@@ -985,6 +990,45 @@ footer { background: var(--black2); border-top: 1px solid var(--border); padding
   .courses-grid{background:transparent;gap:2px}
   section{padding:72px 0}
   .founder-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px) {
+  nav {
+    height: 60px;
+    padding: 0 16px;
+    padding-bottom: 0;
+  }
+  .nav-inner {
+    padding: 0;
+    gap: 12px;
+  }
+  .brand-icon--nav {
+    height: 40px;
+    width: 32px;
+    margin-right: -6px;
+  }
+  .logo-text {
+    font-size: 1.15rem;
+  }
+  .hamburger span {
+    width: 22px;
+  }
+  .mobile-menu {
+    padding: 72px 20px 32px;
+    gap: 4px;
+  }
+  .mobile-menu a {
+    font-size: 1.5rem;
+    padding: 8px 0;
+  }
+  .mobile-menu .btn-red {
+    font-size: 13px;
+    padding: 11px 24px;
+  }
+  .theme-toggle-mobile {
+    width: 40px;
+    height: 40px;
+    margin-top: 14px;
+  }
 }
 @media(max-width:600px) {
   .stats-grid,.blog-grid,.testi-grid{grid-template-columns:1fr}

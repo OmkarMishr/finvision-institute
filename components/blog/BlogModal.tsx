@@ -9,6 +9,13 @@ type Props = {
   onClose: () => void;
 };
 
+function renderBold(text: string) {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+  );
+}
+
 export default function BlogModal({ post, onClose }: Props) {
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -69,10 +76,13 @@ export default function BlogModal({ post, onClose }: Props) {
                 </div>
               );
             }
+            if (item.startsWith("### ")) {
+              return <div key={i} className="blog-modal-sub-head">{item.slice(4)}</div>;
+            }
             if (item.startsWith("## ")) {
               return <div key={i} className="blog-modal-section-head">{item.slice(3)}</div>;
             }
-            return <p key={i} className="blog-modal-para">{item}</p>;
+            return <p key={i} className="blog-modal-para">{renderBold(item)}</p>;
           })}
         </div>
 
