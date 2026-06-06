@@ -393,7 +393,7 @@ nav.scrolled {
 .chart-note strong { color: var(--red); }
 
 /* SOLUTION */
-.solution-sec { }
+
 .solution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 .sol-points { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
 .sol-point { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
@@ -443,7 +443,7 @@ nav.scrolled {
 .courses-footer { margin-top: 36px; text-align: center; }
 
 /* TESTIMONIALS */
-.testi-sec { }
+
 .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); margin-top: 56px; }
 .testi-card { background: var(--black2); padding: 36px 28px; }
 .testi-q { font-family: var(--ff-head); font-size: 4rem; font-weight: 900; color: var(--red); line-height: 0.8; margin-bottom: 16px; opacity: 0.6; }
@@ -475,7 +475,7 @@ nav.scrolled {
 .j-step:hover .j-step-link { letter-spacing: 0.18em; }
 
 /* INSTITUTE */
-.institute-sec { }
+
 .inst-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .inst-features { display: flex; flex-direction: column; gap: 0; margin: 32px 0; }
 .inst-feat { display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--border); }
@@ -550,7 +550,7 @@ nav.scrolled {
 .tl-text { font-size: 14px; color: var(--grey); line-height: 1.6; }
 
 /* FOUNDER */
-.founder-sec { }
+
 .founder-grid { display: grid; grid-template-columns: 320px 1fr; gap: 60px; align-items: start; }
 .founder-card-box {
   background: var(--black3); border: 1px solid var(--border);
@@ -585,7 +585,7 @@ nav.scrolled {
 
 /* TEAM */
 .team-sec { background: var(--black2); }
-.team-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; background: var(--border); margin-top: 56px; }
+.team-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); margin-top: 56px; }
 .team-card { background: var(--black3); padding: 32px 24px; }
 .team-avatar-box {
   width: 72px; height: 72px;
@@ -596,11 +596,12 @@ nav.scrolled {
   margin-bottom: 20px;
 }
 .team-name { font-family: var(--ff-head); font-size: 1.3rem; font-weight: 800; text-transform: uppercase; margin-bottom: 4px; }
-.team-role { font-family: var(--ff-mono); font-size: 10px; color: var(--red); letter-spacing: 0.12em; margin-bottom: 12px; }
+.team-role { font-family: var(--ff-mono); font-size: 10px; color: var(--red); letter-spacing: 0.12em; margin-bottom: 6px; }
+.team-exp { font-family: var(--ff-mono); font-size: 10px; color: var(--grey); letter-spacing: 0.1em; margin-bottom: 12px; opacity: 0.6; }
 .team-desc { font-size: 13px; color: var(--grey); line-height: 1.6; font-weight: 300; }
 
 /* PHILOSOPHY */
-.phil-sec { }
+
 .phil-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; background: var(--border); margin-top: 56px; }
 .phil-card { background: var(--black2); padding: 40px 32px; transition: background 0.2s; }
 .phil-card:hover { background: var(--black3); }

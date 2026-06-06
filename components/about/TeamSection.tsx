@@ -18,6 +18,13 @@ export default function TeamSection() {
             <div className="team-role">Senior Mentor</div>
             <div className="team-desc">12+ years in commodity and currency markets. Expert in risk management frameworks and systematic trading approaches.</div>
           </div>
+          <div className="team-card">
+            <div className="team-avatar-box">VK</div>
+            <div className="team-name">Vikas Kumar</div>
+            <div className="team-role">Trainer &amp; Mentor</div>
+            <div className="team-exp">3+ Years Experience</div>
+            <div className="team-desc">Passionate Forex educator helping traders master market analysis, risk management, and profitable trading strategies through practical learning and mentorship.</div>
+          </div>
         </div>
       </div>
     </section>
