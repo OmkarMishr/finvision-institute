@@ -22,12 +22,11 @@ export default function Navbar() {
         {/* ── LOGO ── */}
         <Image
           className="brand-icon brand-icon--nav"
-          src="/fin-logo.svg"
+          src="/logo-nav.svg"
           alt="Finvision"
-          width={400}
-          height={200}
-          objectFit="contain"
-          style={{ width: 'auto', height: 'auto', maxHeight: '200px' }}
+          width={160}
+          height={44}
+          style={{ width: "auto", height: "220px" }}
         />
 
         <div className="nav-links">

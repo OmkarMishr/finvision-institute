@@ -20,7 +20,7 @@
   --ff-head:    'Barlow Condensed', sans-serif;
   --ff-body:    'Barlow', sans-serif;
   --ff-mono:    'Share Tech Mono', monospace;
-  --nav-h:      68px;
+  --nav-h:      120px;
   --max:        1200px;
 }
 
@@ -119,20 +119,15 @@ nav.scrolled {
 /* LOGO */
 .logo-wrap { display: flex; align-items: center; gap: 0; cursor: pointer; }
 .logo-icon { width: 36px; height: 36px; flex-shrink: 0; }
-/* White-background removal: invert+hue-rotate turns white→black, screen blend makes black transparent on dark bg */
 .brand-icon {
   display: block; flex-shrink: 0; object-fit: contain;
-  filter: invert(1) hue-rotate(180deg);
-  mix-blend-mode: screen;
   align-self: center;
 }
-[data-theme="light"] .brand-icon { filter: none; mix-blend-mode: normal; }
-/* Icon must stay within nav height (68px) so flex centering works */
-.brand-icon--nav    { height: 66px; width: 53px; margin-right: -10px; }
-.brand-icon--footer { height: 60px; width: 48px; margin-right: -9px; color: #1a1a1a;}
-[data-theme="dark"] .brand-icon--footer {
-  color: #ffffff; /* white text in dark mode */
-}
+/* Icon must stay within nav height (120px); width auto preserves portrait aspect ratio */
+.brand-icon--nav    { height: 44px; width: auto; margin-right: -6px; }
+/* invert(1) turns black→white; hue-rotate(180deg) cycles red back from cyan to red; saturate+contrast restore vibrancy */
+[data-theme="dark"] .brand-icon--nav { filter: invert(1) hue-rotate(180deg) saturate(2) contrast(1.15); }
+.brand-icon--footer { height: 60px; width: 48px; margin-right: -9px; }
 .logo-text {
   font-family: var(--ff-head);
   font-size: 1.6rem;
@@ -288,7 +283,7 @@ nav.scrolled {
   min-height: 100vh;
   display: flex; align-items: center;
   position: relative; overflow: hidden;
-  padding-top: var(--nav-h);
+  padding-top: calc(var(--nav-h) + 40px);
 }
 /* stretch wrap to full width inside flex hero so left edge matches other sections */
 .hero .wrap { width: 100%; }
@@ -993,6 +988,7 @@ footer { background: var(--black2); border-top: 1px solid var(--border); padding
   .founder-grid{grid-template-columns:1fr}
 }
 @media(max-width:768px) {
+  :root { --nav-h: 60px; }
   nav {
     height: 60px;
     padding: 0 16px;
@@ -1003,9 +999,9 @@ footer { background: var(--black2); border-top: 1px solid var(--border); padding
     gap: 12px;
   }
   .brand-icon--nav {
-    height: 40px;
-    width: 32px;
-    margin-right: -6px;
+    height: 36px;
+    width: auto;
+    margin-right: -4px;
   }
   .logo-text {
     font-size: 1.15rem;

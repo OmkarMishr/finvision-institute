@@ -3,7 +3,7 @@ import { useNav } from "@/components/context/NavContext";
 import { openWA } from "@/lib/wa";
 
 export default function Footer() {
-  const { navigate } = useNav();
+  const { navigate, theme } = useNav();
 
   return (
     <footer>
@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="logo-wrap">
               <Image
                 className="brand-icon brand-icon--footer"
-                src="/fin-logo.svg"
+                src={theme === "dark" ? "/fin-logo-dark.svg" : "/fin-logo.svg"}
                 alt="Finvision"
                 width={400}
                 height={200}
