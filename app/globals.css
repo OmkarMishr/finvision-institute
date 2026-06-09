@@ -830,6 +830,9 @@ footer { background: var(--black2); border-top: 1px solid var(--border); padding
 .footer-bottom { border-top: 1px solid var(--border); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .footer-copy { font-family: var(--ff-mono); font-size: 11px; color: var(--grey2); }
 .footer-disc { font-family: var(--ff-mono); font-size: 11px; color: var(--grey3); }
+.footer-social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.footer-social-icon { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); color: var(--white); transition: color 0.2s, border-color 0.2s, background 0.2s; }
+.footer-social-icon:hover { color: #fff; border-color: var(--red); background: var(--red); }
 
 /* ══════════════════════════════════════
    COURSE PRICING CARDS
