@@ -100,11 +100,10 @@ body::before {
 /* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  height: 120px; padding: 0 28px;
+  height: 120px; padding-bottom: 30px;
   display: flex; align-items: center;
   transition: background 0.3s, border-color 0.3s;
   border-bottom: 1px solid transparent;
-  padding-bottom: 30px;
 }
 nav.scrolled {
   background: var(--nav-bg);
@@ -124,7 +123,7 @@ nav.scrolled {
   align-self: center;
 }
 /* Icon must stay within nav height (120px); width auto preserves portrait aspect ratio */
-.brand-icon--nav    { height: 44px; width: auto; margin-right: -6px; }
+.brand-icon--nav    { height: 60px; width: auto; }
 /* invert(1) turns black→white; hue-rotate(180deg) cycles red back from cyan to red; saturate+contrast restore vibrancy */
 [data-theme="dark"] .brand-icon--nav { filter: invert(1) hue-rotate(180deg) saturate(2) contrast(1.15); }
 .brand-icon--footer { height: 60px; width: 48px; margin-right: -9px; }
