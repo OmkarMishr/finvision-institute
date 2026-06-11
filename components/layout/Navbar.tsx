@@ -13,7 +13,7 @@ const LINKS: { id: PageName; label: string }[] = [
 ];
 
 export default function Navbar() {
-  const { page, navigate, scrolled, mobileOpen, setMobileOpen } = useNav();
+  const { page, navigate, scrolled, mobileOpen, setMobileOpen, theme } = useNav();
 
   return (
     <nav id="main-nav" className={scrolled ? "scrolled" : ""}>
@@ -22,11 +22,11 @@ export default function Navbar() {
         {/* ── LOGO ── */}
         <Image
           className="brand-icon brand-icon--nav"
-          src="/logo-nav.svg"
+          src={theme === "dark" ? "/logo-nav-dark.svg" : "/logo-nav.svg"}
           alt="Finvision"
-          width={160}
-          height={44}
-          style={{ width: "auto", height: "220px" }}
+          width={636}
+          height={817}
+          style={{ width: "auto", height: "220px", marginTop: "-20px" }}
         />
 
         <div className="nav-links">
