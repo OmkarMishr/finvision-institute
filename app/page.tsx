@@ -41,9 +41,12 @@ export default function Page() {
   };
 
   const navigate = (p: PageName) => {
-    setPage(p);
     setMobileOpen(false);
-    if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+    const routes: Record<PageName, string> = {
+      home: "/", about: "/about", courses: "/courses",
+      blog: "/blog", centers: "/centers", contact: "/contact",
+    };
+    window.location.href = routes[p] ?? "/";
   };
 
   return (

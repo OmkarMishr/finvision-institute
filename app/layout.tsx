@@ -17,6 +17,7 @@ export default function RootLayout({
     <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         
         <link rel="preconnect" href="https://fonts.googleapis.com" />

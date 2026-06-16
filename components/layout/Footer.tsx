@@ -114,6 +114,7 @@ export default function Footer() {
               <a onClick={() => navigate("blog")}>Blog</a>
               <a onClick={() => navigate("centers")}>Our Centers</a>
               <a onClick={() => navigate("contact")}>Contact</a>
+              <a href="/privacy-policy">Privacy Policy</a>
             </div>
           </div>
           <div>

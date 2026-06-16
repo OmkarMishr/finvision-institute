@@ -1,41 +1,49 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useNav } from "@/components/context/NavContext";
 import ThemeToggle from "@/components/ui/ThemeToggle";
-import type { PageName } from "@/lib/types";
 
-const LINKS: { id: PageName; label: string }[] = [
-  { id: "home", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "courses", label: "Courses" },
-  { id: "blog", label: "Blog" },
-  { id: "centers", label: "Centers" },
-  { id: "contact", label: "Contact" },
+const LINKS = [
+  { label: "Home",    href: "/" },
+  { label: "About",   href: "/about" },
+  { label: "Courses", href: "/courses" },
+  { label: "Blog",    href: "/blog" },
+  { label: "Centers", href: "/centers" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
-  const { page, navigate, scrolled, mobileOpen, setMobileOpen, theme } = useNav();
+  const { scrolled, mobileOpen, setMobileOpen, theme } = useNav();
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href;
 
   return (
     <nav id="main-nav" className={scrolled ? "scrolled" : ""}>
       <div className="nav-inner">
 
         {/* ── LOGO ── */}
-        <Image
-          className="brand-icon brand-icon--nav"
-          src={theme === "dark" ? "/logo-nav-dark.svg" : "/logo-nav.svg"}
-          alt="Finvision"
-          width={636}
-          height={817}
-          style={{ width: "auto", height: "220px", marginTop: "-20px" }}
-        />
+        <Link href="/">
+          <Image
+            className="brand-icon brand-icon--nav"
+            src={theme === "dark" ? "/logo-nav-dark.svg" : "/logo-nav.svg"}
+            alt="Finvision"
+            width={636}
+            height={817}
+            style={{ width: "auto", height: "220px", marginTop: "-20px" }}
+          />
+        </Link>
 
         <div className="nav-links">
           {LINKS.map((l) => (
             <a
-              key={l.id}
-              id={`nav-${l.id}`}
-              className={page === l.id ? "active" : ""}
-              onClick={() => navigate(l.id)}
+              key={l.href}
+              href={l.href}
+              className={isActive(l.href) ? "active" : ""}
             >
               {l.label}
             </a>
