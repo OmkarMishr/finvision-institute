@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import type { Post, BlogBodyItem } from "@/lib/types";
 
@@ -39,6 +41,41 @@ export default function BlogPostContent({ post }: { post: Post }) {
 
   return (
     <main>
+      {/* Fixed close button — top-right corner, redirects to /blog */}
+      <a
+        href="/blog"
+        aria-label="Close article and return to blog"
+        style={{
+          position: "fixed",
+          top: 18,
+          right: 24,
+          zIndex: 9999,
+          width: 40,
+          height: 40,
+          borderRadius: "50%",
+          background: "var(--black2)",
+          border: "1px solid var(--border)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textDecoration: "none",
+          color: "var(--white)",
+          fontSize: "1.1rem",
+          lineHeight: 1,
+          transition: "background 0.2s, border-color 0.2s",
+        }}
+        onMouseOver={(e) => {
+          (e.currentTarget as HTMLAnchorElement).style.background = "var(--red)";
+          (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--red)";
+        }}
+        onMouseOut={(e) => {
+          (e.currentTarget as HTMLAnchorElement).style.background = "var(--black2)";
+          (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--border)";
+        }}
+      >
+        &#x2715;
+      </a>
+
       {/* Banner */}
       <section
         style={{
@@ -69,21 +106,6 @@ export default function BlogPostContent({ post }: { post: Post }) {
           {post.cat.charAt(0)}
         </div>
         <div className="wrap" style={{ position: "relative", zIndex: 2 }}>
-          <a
-            href="/blog"
-            style={{
-              display: "inline-block",
-              marginBottom: 20,
-              color: "var(--grey2)",
-              textDecoration: "none",
-              fontFamily: "var(--ff-mono)",
-              fontSize: "0.78rem",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-            }}
-          >
-            ← BACK TO BLOG
-          </a>
           <div className="tag">{post.cat.trim().toUpperCase()}</div>
           <h1
             style={{
