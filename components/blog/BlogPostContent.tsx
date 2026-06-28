@@ -28,58 +28,142 @@ function renderBodyItem(item: BlogBodyItem, i: number) {
   return <p key={i} className="blog-modal-para">{renderBold(item)}</p>;
 }
 
+function getDisplayTitle(post: Post): string {
+  if (post.title) return post.title;
+  if (post.metaTitle) return post.metaTitle.replace(/\s*\|\s*FINVISION.*$/i, "");
+  return post.excerpt.slice(0, 80);
+}
+
 export default function BlogPostContent({ post }: { post: Post }) {
+  const displayTitle = getDisplayTitle(post);
+
   return (
-    <div style={{ paddingTop: "80px", paddingBottom: "60px" }}>
-      <div style={{ maxWidth: 820, margin: "0 auto", padding: "0 24px" }}>
-        <a
-          href="/blog"
+    <main>
+      {/* Banner */}
+      <section
+        style={{
+          background: "var(--black2)",
+          borderBottom: "1px solid var(--border)",
+          paddingTop: "clamp(100px, 15vw, 140px)",
+          paddingBottom: 48,
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          aria-hidden="true"
           style={{
-            display: "inline-block",
-            marginBottom: 32,
-            color: "var(--red)",
-            textDecoration: "none",
+            position: "absolute",
+            right: "-0.05em",
+            top: "50%",
+            transform: "translateY(-50%)",
+            fontSize: "clamp(160px, 22vw, 280px)",
             fontFamily: "var(--ff-head)",
-            fontWeight: 700,
-            textTransform: "uppercase" as const,
-            letterSpacing: "0.1em",
-            fontSize: "0.85rem",
+            fontWeight: 900,
+            color: "rgba(192,51,77,0.05)",
+            lineHeight: 1,
+            userSelect: "none",
+            pointerEvents: "none",
           }}
         >
-          ← BACK TO BLOG
-        </a>
-      </div>
-
-      <div className="blog-modal-hero" style={{ position: "relative", minHeight: 320 }}>
-        {post.image ? (
-          <Image src={post.image} alt={post.title || post.excerpt} fill className="blog-modal-hero-img" />
-        ) : (
-          <>
-            <div className="blog-thumb-bg" style={{ opacity: 0.06 }}></div>
-            <div className="blog-modal-hero-letter">{post.cat.charAt(0)}</div>
-          </>
-        )}
-        <div className="blog-modal-hero-content">
-          <div className="blog-modal-hero-cat">{post.cat.toUpperCase()}</div>
-          <div className="blog-modal-hero-title">{post.title || post.metaTitle}</div>
-          {post.subtitle && <div className="blog-modal-hero-subtitle">{post.subtitle}</div>}
+          {post.cat.charAt(0)}
         </div>
-      </div>
-
-      <div style={{ maxWidth: 820, margin: "0 auto", padding: "0 24px" }}>
-        <div className="blog-modal-meta">
-          <span>By {post.author}</span>
-          <span>{post.date}</span>
-          <span>{post.read} read</span>
+        <div className="wrap" style={{ position: "relative", zIndex: 2 }}>
+          <a
+            href="/blog"
+            style={{
+              display: "inline-block",
+              marginBottom: 20,
+              color: "var(--grey2)",
+              textDecoration: "none",
+              fontFamily: "var(--ff-mono)",
+              fontSize: "0.78rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+            }}
+          >
+            ← BACK TO BLOG
+          </a>
+          <div className="tag">{post.cat.trim().toUpperCase()}</div>
+          <h1
+            style={{
+              fontFamily: "var(--ff-head)",
+              fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
+              fontWeight: 900,
+              textTransform: "uppercase",
+              lineHeight: 1.1,
+              marginTop: 10,
+              color: "var(--white)",
+              maxWidth: 760,
+            }}
+          >
+            {displayTitle}
+          </h1>
+          {post.subtitle && (
+            <p
+              style={{
+                marginTop: 12,
+                color: "var(--grey)",
+                fontSize: "1.05rem",
+                maxWidth: 600,
+                fontStyle: "italic",
+                lineHeight: 1.6,
+              }}
+            >
+              {post.subtitle}
+            </p>
+          )}
+          <div
+            style={{
+              display: "flex",
+              gap: 24,
+              marginTop: 20,
+              fontFamily: "var(--ff-mono)",
+              fontSize: "0.78rem",
+              color: "var(--grey2)",
+              letterSpacing: "0.06em",
+              flexWrap: "wrap",
+            }}
+          >
+            <span>By {post.author}</span>
+            <span>{post.date}</span>
+            <span>{post.read} read</span>
+          </div>
         </div>
+      </section>
+
+      {/* Hero image (only if post has one) */}
+      {post.image && (
+        <div style={{ position: "relative", height: "clamp(220px, 35vw, 420px)", width: "100%" }}>
+          <Image
+            src={post.image}
+            alt={displayTitle}
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+          />
+        </div>
+      )}
+
+      {/* Body */}
+      <div style={{ maxWidth: 820, margin: "0 auto", padding: "56px 24px 80px" }}>
         <div className="blog-modal-body">
           {post.body.map((item, i) => renderBodyItem(item, i))}
         </div>
-        <div style={{ marginTop: 48, paddingTop: 32, borderTop: "1px solid var(--border)" }}>
-          <a href="/blog" className="btn btn-outline" style={{ marginRight: 12 }}>← All Articles</a>
+        <div
+          style={{
+            marginTop: 48,
+            paddingTop: 32,
+            borderTop: "1px solid var(--border)",
+            display: "flex",
+            gap: 12,
+            flexWrap: "wrap",
+          }}
+        >
+          <a href="/blog" className="btn btn-outline">← All Articles</a>
           <a href="/contact" className="btn btn-red">Enroll in a Program →</a>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
