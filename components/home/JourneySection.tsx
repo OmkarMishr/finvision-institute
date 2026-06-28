@@ -1,9 +1,4 @@
-import { useNav } from "@/components/context/NavContext";
-
 export default function JourneySection() {
-  const { navigate } = useNav();
-  const goCourses = () => navigate("courses");
-
   return (
     <section className="journey-sec">
       <div className="wrap">
@@ -16,28 +11,28 @@ export default function JourneySection() {
             <div className="j-step-label">Step 01</div>
             <div className="j-step-name">Foundation</div>
             <div className="j-step-desc">How markets function. Why price moves. Read charts with clarity before learning any strategy.</div>
-            <div className="j-step-link" onClick={goCourses}>→ FOUNDATION PROGRAM</div>
+            <a href="/courses" className="j-step-link" style={{ textDecoration: "none" }}>→ FOUNDATION PROGRAM</a>
           </div>
           <div className="j-step">
             <div className="j-step-num">02</div>
             <div className="j-step-label">Step 02</div>
             <div className="j-step-name">Clarity</div>
             <div className="j-step-desc">Price action, market structure, support &amp; resistance — the way professionals actually see them.</div>
-            <div className="j-step-link" onClick={goCourses}>→ ADVANCED PROGRAM</div>
+            <a href="/courses" className="j-step-link" style={{ textDecoration: "none" }}>→ ADVANCED PROGRAM</a>
           </div>
           <div className="j-step">
             <div className="j-step-num">03</div>
             <div className="j-step-label">Step 03</div>
             <div className="j-step-name">Strategy</div>
             <div className="j-step-desc">Build your own trading system. One that makes sense to you — not someone else&apos;s copied setup.</div>
-            <div className="j-step-link" onClick={goCourses}>→ ADVANCED PROGRAM</div>
+            <a href="/courses" className="j-step-link" style={{ textDecoration: "none" }}>→ ADVANCED PROGRAM</a>
           </div>
           <div className="j-step">
             <div className="j-step-num">04</div>
             <div className="j-step-label">Step 04</div>
             <div className="j-step-name">Execution</div>
             <div className="j-step-desc">Trade with logic and discipline. Refine under live guidance until confidence is real.</div>
-            <div className="j-step-link" onClick={goCourses}>→ MENTORSHIP</div>
+            <a href="/courses" className="j-step-link" style={{ textDecoration: "none" }}>→ MENTORSHIP</a>
           </div>
         </div>
       </div>

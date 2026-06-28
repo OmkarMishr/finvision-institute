@@ -1,9 +1,7 @@
-import { useNav } from "@/components/context/NavContext";
 import WAIcon from "@/components/ui/WAIcon";
 import { openWA } from "@/lib/wa";
 
 export default function ContactInfo() {
-  const { navigate } = useNav();
   const dot = (bg: string) => ({ width: 8, height: 8, borderRadius: "50%", background: bg } as const);
 
   return (
@@ -35,9 +33,9 @@ export default function ContactInfo() {
           <WAIcon />
           Chat on WhatsApp (Fastest)
         </button>
-        <button className="btn btn-outline" style={{ justifyContent: "center" }} onClick={() => navigate("courses")}>
+        <a href="/courses" className="btn btn-outline" style={{ justifyContent: "center" }}>
           View All Programs First →
-        </button>
+        </a>
       </div>
       <div className="map-box" style={{ marginTop: 24 }}>
         <div className="map-box-head">

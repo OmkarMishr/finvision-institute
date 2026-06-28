@@ -1,7 +1,4 @@
-import { useNav } from "@/components/context/NavContext";
-
 export default function CitiesSection() {
-  const { navigate } = useNav();
   return (
     <section className="cities-sec">
       <div className="wrap">
@@ -31,7 +28,7 @@ export default function CitiesSection() {
           </div>
         </div>
         <div style={{ textAlign: "center", marginTop: 48 }}>
-          <button className="btn btn-red" onClick={() => navigate("contact")}>Start Your Learning Journey →</button>
+          <a href="/contact" className="btn btn-red">Start Your Learning Journey →</a>
         </div>
       </div>
     </section>

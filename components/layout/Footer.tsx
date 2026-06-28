@@ -60,7 +60,7 @@ const socialLinks = [
 ];
 
 export default function Footer() {
-  const { navigate, theme } = useNav();
+  const { theme } = useNav();
 
   return (
     <footer>
@@ -102,18 +102,18 @@ export default function Footer() {
           <div>
             <div className="footer-col-title">Programs</div>
             <div className="footer-links">
-              <a onClick={() => navigate("contact")}>Free Demo Class</a>
-              <a onClick={() => navigate("courses")}>Advanced Program</a>
-              <a onClick={() => navigate("courses")}>Mentorship</a>
+              <a href="/contact">Free Demo Class</a>
+              <a href="/courses">Advanced Program</a>
+              <a href="/courses">Mentorship</a>
             </div>
           </div>
           <div>
             <div className="footer-col-title">Company</div>
             <div className="footer-links">
-              <a onClick={() => navigate("about")}>About Us</a>
-              <a onClick={() => navigate("blog")}>Blog</a>
-              <a onClick={() => navigate("centers")}>Our Centers</a>
-              <a onClick={() => navigate("contact")}>Contact</a>
+              <a href="/about">About Us</a>
+              <a href="/blog">Blog</a>
+              <a href="/centers">Our Centers</a>
+              <a href="/contact">Contact</a>
               <a href="/privacy-policy">Privacy Policy</a>
             </div>
           </div>

@@ -1,7 +1,6 @@
-import { useNav } from "@/components/context/NavContext";
+
 
 export default function AboutStorySection() {
-  const { navigate } = useNav();
   return (
     <section>
       <div className="wrap">
@@ -19,7 +18,7 @@ export default function AboutStorySection() {
             <p style={{ marginBottom: 32 }}>
               We built Finvision to change that. Not to sell strategies. Not to give signals. But to build clarity, logic, and real trading understanding — from the ground up.
             </p>
-            <button className="btn btn-red" onClick={() => navigate("courses")}>See Our Programs →</button>
+            <a href="/courses" className="btn btn-red">See Our Programs →</a>
           </div>
           <div>
             <div className="timeline">

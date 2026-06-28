@@ -1,10 +1,7 @@
-import { useNav } from "@/components/context/NavContext";
 import WAIcon from "@/components/ui/WAIcon";
 import { openWA } from "@/lib/wa";
 
 export default function HeroSection() {
-  const { navigate } = useNav();
-
   return (
     <section className="hero">
       <div className="hero-bg-letter">F</div>
@@ -22,12 +19,12 @@ export default function HeroSection() {
             Learn how markets actually move — not indicators, not guesswork. Real price action and decision-making from practitioners who trade every day.
           </p>
           <div className="hero-actions fu4">
-            <button className="btn btn-red" onClick={() => navigate("courses")}>
+            <a href="/courses" className="btn btn-red">
               Start Learning →
-            </button>
-            <button className="btn btn-outline" onClick={() => navigate("centers")}>
+            </a>
+            <a href="/centers" className="btn btn-outline">
               Visit Raipur Center
-            </button>
+            </a>
             <button className="btn btn-wapp" onClick={openWA}>
               <WAIcon />
               WhatsApp

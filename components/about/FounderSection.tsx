@@ -1,9 +1,7 @@
 import Image from "next/image";
-import { useNav } from "@/components/context/NavContext";
 import { openWA } from "@/lib/wa";
 
 export default function FounderSection() {
-  const { navigate } = useNav();
   return (
     <section style={{ background: "var(--black2)" }}>
       <div className="wrap">
@@ -52,9 +50,9 @@ export default function FounderSection() {
               <cite>— Akshay Sir, Founder · Finvision</cite>
             </div>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <button className="btn btn-red" onClick={() => navigate("contact")}>
+              <a href="/contact" className="btn btn-red">
                 Learn with Akshay Sir →
-              </button>
+              </a>
               <button className="btn btn-outline" onClick={openWA}>
                 Send a Message
               </button>

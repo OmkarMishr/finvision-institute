@@ -1,8 +1,6 @@
-import { useNav } from "@/components/context/NavContext";
 import { openWA } from "@/lib/wa";
 
 export default function CentersSection() {
-  const { navigate } = useNav();
   const upcomingBtn = { padding: "10px 20px", fontSize: 13 } as const;
 
   return (
@@ -22,7 +20,7 @@ export default function CentersSection() {
               <div className="mc-feat">3024, Currency Tower, VIP Chowk, Raipur – 492001</div>
               <div className="mc-feat">Mon–Sat · 10:00 AM – 7:00 PM</div>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 24 }}>
-                <button className="btn btn-red" onClick={() => navigate("contact")}>Enroll in Raipur →</button>
+                <a href="/contact" className="btn btn-red">Enroll in Raipur →</a>
                 <button className="btn btn-wapp" onClick={openWA}>WhatsApp Us</button>
               </div>
             </div>
@@ -32,19 +30,19 @@ export default function CentersSection() {
               <div className="uc-city">Bhilai</div>
               <div className="uc-badge">Coming Soon</div>
               <div className="uc-launch">Est. Launch: Q3 2026 · Pre-registrations open</div>
-              <button className="btn btn-outline" style={upcomingBtn} onClick={() => navigate("contact")}>Pre-Register →</button>
+              <a href="/contact" className="btn btn-outline" style={upcomingBtn}>Pre-Register →</a>
             </div>
             <div className="upcoming-card">
               <div className="uc-city">Bilaspur</div>
               <div className="uc-badge">Coming Soon</div>
               <div className="uc-launch">Est. Launch: Q4 2026 · Pre-registrations open</div>
-              <button className="btn btn-outline" style={upcomingBtn} onClick={() => navigate("contact")}>Pre-Register →</button>
+              <a href="/contact" className="btn btn-outline" style={upcomingBtn}>Pre-Register →</a>
             </div>
             <div className="upcoming-card">
               <div className="uc-city">Indore</div>
               <div className="uc-badge">Coming Soon</div>
               <div className="uc-launch">Est. Launch: 2027 · Register interest</div>
-              <button className="btn btn-outline" style={upcomingBtn} onClick={() => navigate("contact")}>Register Interest →</button>
+              <a href="/contact" className="btn btn-outline" style={upcomingBtn}>Register Interest →</a>
             </div>
           </div>
         </div>

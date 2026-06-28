@@ -1,7 +1,4 @@
-import { useNav } from "@/components/context/NavContext";
-
 export default function SolutionSection() {
-  const { navigate } = useNav();
   return (
     <section>
       <div className="wrap">
@@ -49,7 +46,7 @@ export default function SolutionSection() {
               </p>
             </div>
             <div style={{ marginTop: 28 }}>
-              <button className="btn btn-outline" onClick={() => navigate("about")}>Our Philosophy →</button>
+              <a href="/about" className="btn btn-outline">Our Philosophy →</a>
             </div>
           </div>
         </div>

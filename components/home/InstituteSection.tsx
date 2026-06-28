@@ -1,8 +1,6 @@
-import { useNav } from "@/components/context/NavContext";
 import { openWA } from "@/lib/wa";
 
 export default function InstituteSection() {
-  const { navigate } = useNav();
   return (
     <section>
       <div className="wrap">
@@ -36,7 +34,7 @@ export default function InstituteSection() {
               </div>
             </div>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <button className="btn btn-red" onClick={() => navigate("centers")}>View Centers →</button>
+              <a href="/centers" className="btn btn-red">View Centers →</a>
               <a href="https://maps.google.com/?q=Finvision+Institute,+Raipur" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
                 Get Directions
               </a>
