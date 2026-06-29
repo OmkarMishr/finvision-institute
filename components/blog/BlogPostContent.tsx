@@ -81,8 +81,8 @@ export default function BlogPostContent({ post }: { post: Post }) {
         style={{
           background: "var(--black2)",
           borderBottom: "1px solid var(--border)",
-          paddingTop: "clamp(100px, 15vw, 140px)",
-          paddingBottom: 48,
+          paddingTop: "clamp(60px, 8vw, 80px)",
+          paddingBottom: 20,
           position: "relative",
           overflow: "hidden",
         }}
@@ -105,18 +105,17 @@ export default function BlogPostContent({ post }: { post: Post }) {
         >
           {post.cat.charAt(0)}
         </div>
-        <div className="wrap" style={{ position: "relative", zIndex: 2 }}>
+        <div style={{ maxWidth: 820, margin: "0 auto", padding: "0 24px", position: "relative", zIndex: 2 }}>
           <div className="tag">{post.cat.trim().toUpperCase()}</div>
           <h1
             style={{
               fontFamily: "var(--ff-head)",
-              fontSize: "clamp(1.6rem, 4vw, 2.8rem)",
+              fontSize: "clamp(1.5rem, 3.5vw, 2.4rem)",
               fontWeight: 900,
               textTransform: "uppercase",
               lineHeight: 1.1,
               marginTop: 10,
               color: "var(--white)",
-              maxWidth: 760,
             }}
           >
             {displayTitle}
@@ -124,10 +123,9 @@ export default function BlogPostContent({ post }: { post: Post }) {
           {post.subtitle && (
             <p
               style={{
-                marginTop: 12,
+                marginTop: 10,
                 color: "var(--grey)",
-                fontSize: "1.05rem",
-                maxWidth: 600,
+                fontSize: "1rem",
                 fontStyle: "italic",
                 lineHeight: 1.6,
               }}
@@ -138,8 +136,8 @@ export default function BlogPostContent({ post }: { post: Post }) {
           <div
             style={{
               display: "flex",
-              gap: 24,
-              marginTop: 20,
+              gap: 20,
+              marginTop: 12,
               fontFamily: "var(--ff-mono)",
               fontSize: "0.78rem",
               color: "var(--grey2)",
@@ -154,16 +152,18 @@ export default function BlogPostContent({ post }: { post: Post }) {
         </div>
       </section>
 
-      {/* Hero image (only if post has one) */}
+      {/* Hero image — constrained to content width */}
       {post.image && (
-        <div style={{ position: "relative", height: "clamp(220px, 35vw, 420px)", width: "100%" }}>
-          <Image
-            src={post.image}
-            alt={displayTitle}
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
+        <div style={{ maxWidth: 820, margin: "0 auto", padding: "32px 24px 0" }}>
+          <div style={{ position: "relative", height: "clamp(240px, 35vw, 420px)", maxHeight: 420, borderRadius: 4, overflow: "hidden" }}>
+            <Image
+              src={post.image}
+              alt={displayTitle}
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </div>
         </div>
       )}
 
